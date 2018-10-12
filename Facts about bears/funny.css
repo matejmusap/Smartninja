@@ -53,18 +53,6 @@ p {
    display: none;
 }
 
-.indiv:active {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-img:active + p {
-    display: block;
-    width: 50%;
-    margin-left:1vh;
-}
-
 .footer {
     background-color: #a6a6a6;
     width: 100%;
