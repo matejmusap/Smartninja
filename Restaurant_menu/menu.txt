@@ -1,0 +1,4 @@
+Menu:
+fish: 99 kn
+meat: 25 kn
+THANKS FOR YOUR ORDER

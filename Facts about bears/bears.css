@@ -1,0 +1,132 @@
+* {
+    margin: 0 auto;
+}
+
+body {
+    background: #FFA17F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00223E, #FFA17F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00223E, #FFA17F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;    
+}
+
+.scentific-name {
+    font-style: italic;
+}
+
+.species {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: rgb(0, 255, 204);
+    border-top: 2px solid greenyellow;
+    border-bottom: 2px solid greenyellow;
+    height: 40%;
+    width: 90%;
+    z-index: 0;
+}
+
+.pict-rang {
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-self: center;
+    border: 1px solid seagreen;
+    border-radius: 3%;
+}
+
+.pict-rang:hover {
+    transform: scale(1.4);
+    transition: all 0.4s linear;
+}
+
+.concern {
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+}
+
+.concern img{
+    width: 25%;
+    height: 25%;
+    border: 1px solid black;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    background-color: aqua;
+}
+
+.facts {
+    width: 60%;
+    padding: 5vh;
+}
+
+h4 {
+    display: inline;
+}
+
+h3 {
+    display: flex;
+    align-self: center;
+    color: gold;
+    margin-top: 10vh;
+    font-size: 4vh;
+}
+
+.header {
+    color: lavender;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1f4037;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #99f2c8, #1f4037); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+button {
+    background-color: darkgoldenrod;
+    width: 20vh;
+    border-radius: 10%;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.footer {
+    background-color: #a6a6a6;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subspecies h4 {
+    text-decoration: underline;
+}
+
+.subspecies h4:hover {
+    color: pink;
+}
+
+.subspecies ul {
+    display: none;
+}
+
+.subspecies:active > ul {
+    display: block;
+}
+
+.subspecies:active > ul > li > ul {
+    display: block;
+}
+
+.arrow {
+    width: 2vh;
+    height: 2vh;
+}

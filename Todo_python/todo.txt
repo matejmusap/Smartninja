@@ -1,0 +1,6 @@
+Completed tasks:
+- meet band
+- reserve reaturant
+
+Incomplete tasks:
+- buy suit
