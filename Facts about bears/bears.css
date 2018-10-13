@@ -77,6 +77,12 @@ h3 {
     font-size: 4vh;
 }
 
+.brown-bear-subspec {
+    color: palegreen;
+    font-size: 1.1em;
+    margin: 1vh;
+}
+
 .header {
     color: lavender;
     width: 100%;
@@ -114,16 +120,8 @@ button {
     color: pink;
 }
 
-.subspecies ul {
+.listSubspecies {
     display: none;
-}
-
-.subspecies:active > ul {
-    display: block;
-}
-
-.subspecies:active > ul > li > ul {
-    display: block;
 }
 
 .arrow {

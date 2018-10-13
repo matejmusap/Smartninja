@@ -4,82 +4,117 @@
         <title>Bears of world</title>
         <link rel="stylesheet" href="funny.css">
         <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     </head>
     <body>
-        <h1>Funny facts about bears</h1>
+        <div class="header">
+            <h1>Funny facts about bears</h1>
+            <h2>Click on picture to find out</h2>
+        </div>
         <div class="group">
             <div class="double">
                 <div class="indiv">
-                    <img src="https://static.boredpanda.com/blog/wp-content/uploads/2016/10/abandoned-brown-panda-qizai-4.jpg" alt="brown panda"/>
-                    <p>
-                        The Qinling panda (Ailuropoda melanoleuca qinlingensis) is a subspecies of the giant panda, discovered in the 1960s but not recognized as a subspecies until 2005.
-                        Disregarding the nominate subspecies, it is the first giant panda subspecies to be recognized. 
-                        It differs from the more familiar nominate subspecies by its smaller skull and dark brown and light brown (rather than black and white) fur, and its smaller overall size.
-                    </p>
+                    <a href="#ex1" rel="modal:open"><img src="http://portuguese.xinhuanet.com/2017-03/30/136170228_14908390577681n.jpg" alt="brown panda"/></a>
+                    <div id="ex1" class="modal">
+                        <img class ="larger" src="http://portuguese.xinhuanet.com/2017-03/30/136170228_14908390577681n.jpg" alt="brown panda"/>
+                        <p>
+                            The Qinling panda (Ailuropoda melanoleuca qinlingensis) is a subspecies of the giant panda, discovered in the 1960s but not recognized as a subspecies until 2005.
+                            Disregarding the nominate subspecies, it is the first giant panda subspecies to be recognized. 
+                            It differs from the more familiar nominate subspecies by its smaller skull and dark brown and light brown (rather than black and white) fur, and its smaller overall size.
+                        </p>
+                        <a href="#" rel="modal:close">Close</a>
+                      </div>
                 </div>
                 <div class="indiv">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Atlasbear.jpg" alt="Atlas bear in Roman mosaic"/>
-                    <p>
+                    <a href="#ex2" rel="modal:open"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Atlasbear.jpg" alt="Atlas bear in Roman mosaic"/></a>
+                    <div id="ex2" class="modal">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Atlasbear.jpg" alt="Atlas bear in Roman mosaic"/>
+                        <p>
                         The names Atlas bear and African bear (Ursus arctos crowtheri) have been applied to an extinct population or populations of the brown bear in North Africa. 
                         The Cantabrian brown bear likely was introduced to Africa from Spain by the Romans who imported Iberian bears for spectacles.
                         The Atlas bear was Africa's only native bear that survived into modern times.
-                    </p>
+                        </p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
                 </div>
             </div>
             <div class="double">
                 <div class="indiv">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/California_state_flag.png" alt="state flag of California"/>
-                    <p>
-                        The California grizzly bear (Ursus arctos californicus) is an extinct subspecies of the grizzly bear, the very large North American brown bear. 
-                        "Grizzly" could have meant "grizzled" (that is, with golden and grey tips of the hair) or "fear-inspiring" (this is actually spelled "grisly").
-                        Nonetheless, after careful study, naturalist George Ord formally classified it in 1815 – not for its hair, but for its character – as Ursus horribilis ("terrifying bear").
-                        Genetically, North American grizzlies are closely related. 
-                        In size and coloring, the California grizzly bear was much like the grizzly bear of the southern coast of Alaska. 
-                        In California, it was particularly admired for its beauty, size and strength. 
-                        The grizzly became a symbol of the Bear Flag Republic, a moniker that was attached to the short-lived attempt by a group of American settlers to break away from Mexico in 1846. 
-                        Later, this rebel flag became the basis for the state flag of California, and then California was known as the "Bear State."
-                    </p>
+                    <a href="#ex3" rel="modal:open"><img src="https://www.govdocs.com/wp-content/uploads/2017/10/1-852x430.jpg" alt="state flag of California"/></a>
+                    <div id="ex3" class="modal">
+                        <img class ="larger" src="https://www.govdocs.com/wp-content/uploads/2017/10/1-852x430.jpg" alt="state flag of California"/>
+                        <p>
+                            The California grizzly bear (Ursus arctos californicus) is an extinct subspecies of the grizzly bear, the very large North American brown bear. 
+                            "Grizzly" could have meant "grizzled" (that is, with golden and grey tips of the hair) or "fear-inspiring" (this is actually spelled "grisly").
+                            Nonetheless, after careful study, naturalist George Ord formally classified it in 1815 – not for its hair, but for its character – as Ursus horribilis ("terrifying bear").
+                            Genetically, North American grizzlies are closely related. 
+                            In size and coloring, the California grizzly bear was much like the grizzly bear of the southern coast of Alaska.  
+                            The grizzly became a symbol of the Bear Flag Republic, a moniker that was attached to the short-lived attempt by a group of American settlers to break away from Mexico in 1846. 
+                            Later, this rebel flag became the basis for the state flag of California, and then California was known as the "Bear State."
+                        </p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
                 </div>
                 <div class="indiv">
-                    <img src="https://photos.smugmug.com/Nature/By-Species/Mammals/Bear/Spectacled-Bear/i-RXzXQvr/0/ec77e85d/S/Chaparri062411-1546-Edit-S.jpg" alt="Spectacled bear sectacles"/>
-                    <p>
-                        The species typically has distinctive beige or ginger-coloured markings across its face and upper chest, though not all spectacled bears have "spectacle" markings. 
-                        The pattern and extent of pale markings are slightly different on each individual bear, and bears can be readily distinguished by this.
-                    </p>
+                    <a href="#ex4" rel="modal:open"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Tremarctos_ornatus_25.jpg/800px-Tremarctos_ornatus_25.jpg" alt="Spectacled bear sectacles"/></a>
+                    <div id="ex4" class="modal">
+                        <img class ="larger" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Tremarctos_ornatus_25.jpg/800px-Tremarctos_ornatus_25.jpg" alt="Spectacled bear sectacles"/>
+                        <p>
+                            The species typically has distinctive beige or ginger-coloured markings across its face and upper chest, though not all spectacled bears have "spectacle" markings. 
+                            The pattern and extent of pale markings are slightly different on each individual bear, and bears can be readily distinguished by this.
+                        </p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
                 </div>
             </div>
             <div class="double">
                 <div class="indiv">
-                    <img src="https://cangeo-media-library.s3.amazonaws.com/s3fs-public/styles/web_article_slider_image/public/images/web_articles/article_images/3128/kermode_bear.jpg?itok=y66Jb_Dy" alt="spirit bear"/>
-                    <p>
-                        The Kermode bear (Ursus americanus kermodei), also known as the spirit bear (particularly in British Columbia), is a rare subspecies of the American black bear living in the Central and North Coast regions of British Columbia, Canada.
-                        It is the official provincial mammal of British Columbia. While most Kermode bears are black, there are between 100 and 500 fully white individuals.
-                        The white variant is most common on three islands in British Columbia (Gribbell, Princess Royal, and Roderick), where 10–20% of bears are white.
-                    </p>
+                    <a href="#ex5" rel="modal:open"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Ursus_americanus_kermodei%2C_Spirit_Bear_Lodge%2C_Klemtu%2C_BC_1.jpg/800px-Ursus_americanus_kermodei%2C_Spirit_Bear_Lodge%2C_Klemtu%2C_BC_1.jpg" alt="spirit bear"/></a>
+                    <div id="ex5" class="modal">
+                        <img class ="larger" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Ursus_americanus_kermodei%2C_Spirit_Bear_Lodge%2C_Klemtu%2C_BC_1.jpg/800px-Ursus_americanus_kermodei%2C_Spirit_Bear_Lodge%2C_Klemtu%2C_BC_1.jpg" alt="spirit bear"/>
+                        <p>
+                            The Kermode bear (Ursus americanus kermodei), also known as the spirit bear (particularly in British Columbia), is a rare subspecies of the American black bear living in the Central and North Coast regions of British Columbia, Canada.
+                            It is the official provincial mammal of British Columbia. While most Kermode bears are black, there are between 100 and 500 fully white individuals.
+                            The white variant is most common on three islands in British Columbia (Gribbell, Princess Royal, and Roderick), where 10–20% of bears are white.
+                        </p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
                 </div>
-                    <div class="indiv">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_VN_ciezz48z7IpiwTO62_r-Cf5GxfJFfqGZQ9d841Ldy3xm6-Q" alt="sun bear tongue"/>
-                    <p>
-                        During feeding, the sun bear can extend its exceptionally long tongue 20–25 cm (7.9–9.8 in) to extract insects and honey.
-                        The sun bear's teeth are very large, especially canines, and high bite forces in relation to its body size, which are not well understood, but could be related to its frequent opening of tropical hardwood trees (with its powerful jaws and claws) in pursuit of insects, larvae, or honey.
-                    </p>
+                <div class="indiv">
+                    <a href="#ex6" rel="modal:open"><img src="https://c1.staticflickr.com/3/2921/33554786195_7d7a9ba4be_z.jpg" alt="sun bear tongue"/></a>
+                    <div id="ex6" class="modal">
+                        <img class ="larger" src="https://c1.staticflickr.com/3/2921/33554786195_7d7a9ba4be_z.jpg" alt="sun bear tongue"/>
+                        <p>
+                            During feeding, the sun bear can extend its exceptionally long tongue 20–25 cm (7.9–9.8 in) to extract insects and honey.
+                            The sun bear's teeth are very large, especially canines, and high bite forces in relation to its body size, which are not well understood, but could be related to its frequent opening of tropical hardwood trees (with its powerful jaws and claws) in pursuit of insects, larvae, or honey.
+                        </p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
                 </div>
             </div>
             <div class="double">
                 <div class="indiv">
-                    <img src="http://justfunfacts.com/wp-content/uploads/2017/10/asiatic-black-bear-4.jpg" alt="asina black bear on tree">
-                    <p>
-                        Their claws are short and strong for climbing trees.
-                        They may spend half their life in the trees, although older adults may become to heavy to climb.
-                    </p>
+                    <a href="#ex7" rel="modal:open"><img src="https://c1.staticflickr.com/6/5330/9443654647_f7d36a2bc3_b.jpg" alt="asina black bear on tree"></a>
+                    <div id="ex7" class="modal">
+                        <img class ="larger" src="https://c1.staticflickr.com/6/5330/9443654647_f7d36a2bc3_b.jpg" alt="asina black bear on tree">
+                        <p>
+                            Their claws are short and strong for climbing trees.
+                            They may spend half their life in the trees, although older adults may become to heavy to climb.
+                        </p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
                 </div>
                 <div class="indiv">
-                    <img src="https://i.pinimg.com/originals/26/ca/fa/26cafa65492419cc6c4029a0811b1ba6.jpg" alt="Sloth bear eating ants"/>
-                    <p>
-                        Sloth bears are expert hunters of termites, which they locate by smell.
-                        On arriving at a mound, they scrape at the structure with their claws till they reach the large combs at the bottom of the galleries, and disperse the soil with violent puffs.
-                        The termites are then sucked up through the muzzle, producing a sucking sound which can be heard 180 m away.
-                    </p>
+                    <a href="#ex8" rel="modal:open"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Sloth_bear_%2814%29.jpg/800px-Sloth_bear_%2814%29.jpg" alt="Sloth bear eating ants"/></a>
+                    <div id="ex8" class="modal">
+                        <img class ="larger" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Sloth_bear_%2814%29.jpg/800px-Sloth_bear_%2814%29.jpg" alt="Sloth bear eating ants"/>
+                        <p>
+                            Sloth bears are expert hunters of termites, which they locate by smell.
+                            On arriving at a mound, they scrape at the structure with their claws till they reach the large combs at the bottom of the galleries, and disperse the soil with violent puffs.
+                            The termites are then sucked up through the muzzle, producing a sucking sound which can be heard 180 m away.
+                        </p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
                 </div>
             </div>
         </div>        
@@ -87,7 +122,13 @@
             <button>Back to fact page</button>
         </form>
         <div class="footer">
-            <p >All informations and images are downloaded from <a href="https://www.wikipedia.org/">wikipedia.org</a>.</p>
+            <p >All imges and informations are downloaded from various open-source websites!</p>
         </div>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     </body>
 </html>
