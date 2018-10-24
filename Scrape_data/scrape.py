@@ -1,0 +1,30 @@
+from BeautifulSoup import BeautifulSoup
+from urllib2 import urlopen
+from model import Person
+from util import create_csv_file
+
+url = 'https://scrapebook22.appspot.com/'
+response = urlopen(url).read()
+soup = BeautifulSoup(response)
+print soup.html.title.string
+
+persons = []
+
+for link in soup.findAll("a"):
+    if link.string == "See full profile":
+        person_url = 'https://scrapebook22.appspot.com' + link["href"]
+        person_html = urlopen(person_url).read()
+        person_soup = BeautifulSoup(person_html)
+        email = person_soup.find("span", attrs={"class": "email"}).string
+        name = person_soup.find("div", attrs={"class": "col-md-8"}).h1.string
+        city = person_soup.find("span", attrs={"data-city": True}).string
+        first_name, last_name = name.split(" ")
+        person = Person(first_name, last_name, email, city)
+        persons.append(person)
+
+csv_question = raw_input("Do you want to save data into a CSV file? (yes/no) ")
+
+if csv_question == "yes":
+    create_csv_file(persons)
+
+print ("Thanks for using this program :)")

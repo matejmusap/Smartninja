@@ -21,3 +21,4 @@ print "Lista iznoda PDV-a proizvoda je " + str(pdv_proizvoda)
 print "Lista cijena proizvoda je " + str(cijene_ukupno)
 
 
+
