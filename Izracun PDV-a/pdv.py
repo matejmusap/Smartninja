@@ -1,4 +1,4 @@
-print "CIJENE ROIZVODA S PDV-om"
+print "CIJENE PROIZVODA S PDV-om"
 proizvodi = []
 pdv_proizvoda = []
 cijene_ukupno = []
