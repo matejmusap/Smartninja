@@ -7,8 +7,10 @@ wiki_url = "https://en.wikipedia.org/wiki/Game_of_Thrones"
 wiki_html = urllib.urlopen(wiki_url).read()
 wiki_content = BeautifulSoup(wiki_html)
 
-seasons_table = wiki_content.find("table", attrs={"class": "wikitable plainrowheaders"})
-seasons = seasons_table.findAll('a', attrs={'href': re.compile("\/wiki\/Game_of_Thrones_\(season_?[0-7]+\)")})
+seasons_table = wiki_content.find(
+    "table", attrs={"class": "wikitable plainrowheaders"})
+seasons = seasons_table.findAll(
+    'a', attrs={'href': re.compile("\/wiki\/Game_of_Thrones_\(season_?[0-9]+\)")})
 
 views = 0
 
@@ -17,7 +19,8 @@ for season in seasons:
     season_html = urllib.urlopen(season_url).read()
     season_content = BeautifulSoup(season_html)
 
-    episodes_table = season_content.find("table", attrs={"class": "wikitable plainrowheaders wikiepisodetable"})
+    episodes_table = season_content.find(
+        "table", attrs={"class": "wikitable plainrowheaders wikiepisodetable"})
 
     if episodes_table:
         episode_rows = episodes_table.findAll("tr", attrs={"class": "vevent"})
@@ -26,7 +29,9 @@ for season in seasons:
             for episode_row in episode_rows:
                 episode_views = episode_row.findAll("td")[-1]
                 episode_views.decompose()
-                print float(episode_views.text)
-                views += float(re.sub(r"\[?[0-9]+\]", "", episode_views.text))
-                print views
+                try:
+                    views += float(re.sub(r"\[?[0-9]+\]", "", episode_views.text))
+                    print views
+                except ValueError:
+                    pass
 print str(views) + " millions"
