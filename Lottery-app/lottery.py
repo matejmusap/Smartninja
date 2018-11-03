@@ -8,4 +8,3 @@ def generate_random_numbers(number, range):
         if x not in list_of_numbers:
             list_of_numbers.append(x)
     return list_of_numbers
-
