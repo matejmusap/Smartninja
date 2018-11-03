@@ -1,0 +1,16 @@
+img {
+  width: 100%;
+}
+
+.about {
+  text-align: center;
+  margin: 5% 25%;
+}
+
+.list {
+  margin: 5% 25%;
+}
+
+#contact {
+  list-style-type: none;
+}
