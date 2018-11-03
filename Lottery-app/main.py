@@ -36,6 +36,7 @@ class MainHandler(BaseHandler):
 
 class GeneratorHandler(BaseHandler):
     def get(self):
+        numbers = []
         numbers = lottery.generate_random_numbers(8, 89)
         params = {"numbers": numbers}
         return self.render_template("generator.html", params=params)
