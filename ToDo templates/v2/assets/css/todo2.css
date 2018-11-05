@@ -1,0 +1,40 @@
+body {
+  background: #4b79a1; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #283e51,
+    #4b79a1
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #283e51, #4b79a1);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-family: "Spicy Rice", cursive;
+}
+label {
+  font-family: "Oswald", sans-serif;
+}
+h2 {
+  font-family: "Roboto Slab", serif;
+  text-decoration: underline;
+}
+button {
+  color: hotpink;
+}
+button:hover {
+  background-color: #e55ea2;
+  color: blueviolet;
+}
+.task-form {
+  display: flex;
+  flex-direction: row;
+}
+.task-form p {
+  margin: auto 4vh;
+}
+.completed {
+  text-decoration: line-through;
+}

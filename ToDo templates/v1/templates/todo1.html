@@ -1,0 +1,49 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Todo list</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/todo1.css" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Slab|Spicy+Rice" rel="stylesheet">
+</head>
+
+<body>
+    <h1>TODO LIST</h1>
+    <form action="POST">
+        <label for="task">New task: </label>
+        <input type="text">
+        <button type="submit">Add task</button>
+    </form>
+    <div class="lists">
+        <div>
+            <h2>Incompleted task:</h2>
+            <ul>
+                <li>
+                    <form class="task-form">
+                        <input type="checkbox">
+                        <p>{{CopmletedTask}}</p>
+                        <button>DELETE</button>
+                    </form>
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2>Completed task:</h2>
+            <ul>
+                <li>
+                    <form class="task-form">
+                        <input type="checkbox" checked>
+                        <p>{{CopmletedTask}}</p>
+                        <button>DELETE</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
