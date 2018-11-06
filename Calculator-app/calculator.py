@@ -7,11 +7,11 @@ def main():
 def calculate(first_number, second_number, operator):
     try:
         if operator == "+":
-            result =  first_number + second_number
+            result = first_number + second_number
         elif operator == "-":
             result = first_number - second_number
         elif operator == "*":
-            rresult = first_number * second_number
+            result = first_number * second_number
         elif operator == "/":
             result = first_number / second_number
         else:

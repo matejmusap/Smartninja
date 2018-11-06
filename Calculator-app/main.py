@@ -35,11 +35,14 @@ class MainHandler(BaseHandler):
         params = {"full_result": full_result}
         return self.render_template("calculator.html", params=params)
     def post(self):
-        first_number = float(self.request.get("first_number"))
-        second_number = float(self.request.get("second_number"))
-        operator = self.request.get("operator")
-        full_result = ""
-        full_result = calculator.calculate(first_number, second_number, operator)
+        try:
+            first_number = float(self.request.get("first_number"))
+            second_number = float(self.request.get("second_number"))
+            operator = self.request.get("operator")
+            full_result = ""
+            full_result = calculator.calculate(first_number, second_number, operator)
+        except Exception as e:
+            full_result = "Please enter a whole number."
         params = {"full_result": full_result}
         return self.render_template("calculator.html", params=params)
 
