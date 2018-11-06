@@ -2,6 +2,7 @@
 import os
 import jinja2
 import webapp2
+import converter
 
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
@@ -30,7 +31,15 @@ class BaseHandler(webapp2.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        return self.render_template("todo2.html")
+        result_string = "0"
+        params = {"result_str": result_string}
+        return self.render_template("converter.html", params=params)
+    def post(self):
+        dist = float(self.request.get("dist"))
+        unit = self.request.get("unit")
+        result_string = converter.convert(dist, unit)
+        params = {"result_str": result_string}
+        return self.render_template("converter.html", params=params)
 
 
 app = webapp2.WSGIApplication([

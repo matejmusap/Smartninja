@@ -2,6 +2,7 @@
 import os
 import jinja2
 import webapp2
+import calculator
 
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
@@ -30,8 +31,17 @@ class BaseHandler(webapp2.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        return self.render_template("todo2.html")
-
+        full_result = ""
+        params = {"full_result": full_result}
+        return self.render_template("calculator.html", params=params)
+    def post(self):
+        first_number = float(self.request.get("first_number"))
+        second_number = float(self.request.get("second_number"))
+        operator = self.request.get("operator")
+        full_result = ""
+        full_result = calculator.calculate(first_number, second_number, operator)
+        params = {"full_result": full_result}
+        return self.render_template("calculator.html", params=params)
 
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
