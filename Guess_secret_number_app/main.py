@@ -31,8 +31,6 @@ class BaseHandler(webapp2.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        secret_number = guess.generate_secret_numb()
-        print str(secret_number)
         hint = "Number is between 1 and 60"
         message = "Try to guess!"
         params = {"hint": hint, "message": message}
