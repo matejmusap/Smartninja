@@ -1,41 +1,41 @@
-from models.item import ToDoItem
+from models.item import Item
 from user import UserRepository
 
 # Handles CRUD methods for ToDoItem objects
-class ToDoItemRepository():
+class ItemRepository():
     @staticmethod
-    def create(title, completed, description, dueDate, user_email):
+    def create(task, completed, description, task_due_date, user_email):
         user = UserRepository.read(email= user_email)
-        task = ToDoItem(title=title, completed=completed, description=description, dueDate=dueDate, assigne=user)
+        task = Item(task=task, completed=completed, description=description, task_due_date=task_due_date, assigne=user)
         return task.put()
 
     @staticmethod
-    def read(title):
-        result = ToDoItem.query(ToDoItem.title == title).fetch(1)
+    def read(task):
+        result = Item.query(Item.task == task).fetch(1)
         if result:
             return result
 
     @staticmethod
     def readAll():
-        return ToDoItem.query().order(ToDoItem.title)
+        return Item.query().order(Item.task)
 
     @staticmethod
     def readAllOfUser(user_email):
         user = UserRepository.read(email= user_email)
-        return ToDoItem.query(ToDoItem.assigne == user)
+        return Item.query(Item.assigne == user)
 
     @staticmethod
-    def update(title, changes):
-        saved_task = ToDoItemRepository.read(title)
+    def update(task, changes):
+        saved_task = ItemRepository.read(task)
         if changes.completed:
             saved_task.completed = changes.completed
-        if changes.dueDate:
-            saved_task.dueDate = changes.dueDate
+        if changes.task_due_date:
+            saved_task.task_due_date = changes.task_due_date
         if changes.description:
-            saved_task.description = changes.description
+            saved_task.task_goal = changes.task_goal
         return saved_task.put()
 
     @staticmethod
     def delete(title):
-        saved_task = ToDoItemRepository.read(title)
+        saved_task = ItemRepository.read(task)
         saved_task.delete()

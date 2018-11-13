@@ -1,34 +1,32 @@
-{% extends "template.html" %} {% block title %}List of projects{% endblock title
-%} {% block page_content %}
+{% extends "template.html" %} {% block title %}List of tasks{% endblock title %}
+{% block page_content %}
 <h1>
   Tasks
   <a class="btn btn-primary" href="/item/create" role="button">Create new</a>
 </h1>
-<p>An existing list of tasks of the TaskCreator app</p>
+<p>An existing Tasks of the TaskCreator app</p>
 <table class="table table-bordered">
   <thead>
     <tr>
       <th scope="col">Id</th>
       <th scope="col">Task</th>
-      <th scope="col">Status</th>
-      <th scope="col">User</th>
+      <th scope="col">Main goal</th>
+      <th scope="col">Due_date</th>
       <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody>
-    {% if itemList %}
-      {% for list in itemList %}
+    {% if listList %} {% for list in listList %}
     <tr>
-      <td>{{ item.key.id() }}</td>
-      <td>{{ item.task }}</td>
-      <td>{{ item.completed}}</td>
-      <td>{{ item.user }}</td>
-      <td>{{ item.project }}</td>
+      <td>{{ list.key.id }}</td>
+      <td>{{ list.project }}</td>
+      <td>{{ list.project_goal }}</td>
+      <td>{{ list.due_date }}</td>
       <td>
-        <a class="btn btn-primary" href="/item/{{item.task}}" role="button"
+        <a class="btn btn-primary" href="/list/{{list.project}}" role="button"
           >See details</a
         >
-        <a class="btn btn-danger" href="/items" role="button">Delete</a>
+        <a class="btn btn-danger" href="/lists" role="button">Delete</a>
       </td>
     </tr>
     {% endfor %} {% endif %}
