@@ -24,9 +24,9 @@ class ListController(BaseHandler):
     def create_post(self):
         project = self.request.get("project")
         project_goal = self.request.get("project_goal")
-        form_date = self.request.get("date_of_birth").split('-')
-        due_date = date(int(form_date[0]),int(form_date[1]),int(form_date[2]))
-        new_list= ListRepository.create(project=project, project_goal=project_goal, due_date=due_date)
+        form_date = self.request.get("due_date").split('-')
+        due_date = date(int(form_date[0]), int(form_date[1]), int(form_date[2]))
+        new_list = ListRepository.create(project=project, project_goal=project_goal, due_date=due_date)
         # adding lag for local development
         time.sleep(1)
         return self.redirect_to('list-list')

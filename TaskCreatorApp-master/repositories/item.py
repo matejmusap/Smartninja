@@ -2,11 +2,14 @@ from models.item import Item
 from user import UserRepository
 
 # Handles CRUD methods for ToDoItem objects
+
+
 class ItemRepository():
     @staticmethod
-    def create(task, completed, description, task_due_date, user_email):
-        user = UserRepository.read(email= user_email)
-        task = Item(task=task, completed=completed, description=description, task_due_date=task_due_date, assigne=user)
+    def create(task, completed, description, task_due_date, task_goal, user_email):
+        user = UserRepository.read(email=user_email)
+        task = Item(task=task, completed=completed, description=description, task_goal=task_goal,
+                    task_due_date=task_due_date, assigne=user)
         return task.put()
 
     @staticmethod
@@ -21,7 +24,7 @@ class ItemRepository():
 
     @staticmethod
     def readAllOfUser(user_email):
-        user = UserRepository.read(email= user_email)
+        user = UserRepository.read(email=user_email)
         return Item.query(Item.assigne == user)
 
     @staticmethod
