@@ -28,7 +28,7 @@ app = webapp2.WSGIApplication([
     # specified that handles that request
     webapp2.Route('/list/<project>', handler=ListController, handler_method="get_list", methods=['GET']),
 
-    webapp2.Route('/items', ItemController, name="task-list"),
+    webapp2.Route('/items', ItemController, name="item-list"),
 
     # example routes with a custom defined method for handling of requests
     webapp2.Route('/item/create', handler=ItemController, handler_method="create_get", methods=['GET']),

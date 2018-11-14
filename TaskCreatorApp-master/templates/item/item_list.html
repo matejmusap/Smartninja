@@ -10,23 +10,31 @@
     <tr>
       <th scope="col">Id</th>
       <th scope="col">Task</th>
-      <th scope="col">Main goal</th>
-      <th scope="col">Due_date</th>
+      <th scope="col">Project</th>
+      <th scope="col">Completed</th>
+      <th scope="col">Task goals</th>
+      <th scope="col">Due date</th>
       <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody>
-    {% if listList %} {% for list in listList %}
+    {% if itemList %} {% for item in itemList %}
     <tr>
-      <td>{{ list.key.id }}</td>
-      <td>{{ list.project }}</td>
-      <td>{{ list.project_goal }}</td>
-      <td>{{ list.due_date }}</td>
+      <td>{{ item.key.id() }}</td>
+      <td>{{ item.task }}</td>
+      <td>{{ item.project }}</td>
+      {% if item.completed == False %}
+      <td>Not completed</td>
+      {% else %}
+      <td>Completed</td>
+      {% endif %}
+      <td>{{ item.task_goal }}</td>
+      <td>{{ item.task_due_date }}</td>
       <td>
-        <a class="btn btn-primary" href="/list/{{list.project}}" role="button"
+        <a class="btn btn-primary" href="/item/{{item.task}}" role="button"
           >See details</a
         >
-        <a class="btn btn-danger" href="/lists" role="button">Delete</a>
+        <a class="btn btn-danger" href="/items" role="button">Delete</a>
       </td>
     </tr>
     {% endfor %} {% endif %}

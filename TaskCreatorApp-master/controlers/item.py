@@ -22,9 +22,11 @@ class ItemController(BaseHandler):
     def create_post(self):
         task = self.request.get("task")
         task_goal = self.request.get("task_goal")
+        user = self.request.get("user")
+        completed = False
         form_date = self.request.get("task_due_date").split('-')
         task_due_date = date(int(form_date[0]),int(form_date[1]),int(form_date[2]))
-        new_item= ItemRepository.create(task=task, task_goal=task_goal, task_due_date=task_due_date)
+        new_item= ItemRepository.create(completed=completed, user_email=user, task=task, task_goal=task_goal, task_due_date=task_due_date)
         # adding lag for local development
         time.sleep(1)
         return self.redirect_to('item-list')
