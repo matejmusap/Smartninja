@@ -14,10 +14,9 @@ class ItemRepository():
         return task.put()
 
     @staticmethod
-    def read(task):
-        result = Item.query(Item.task == task).fetch(1)
-        if result:
-            return result
+    def read(task_id):
+        result = Item.get_by_id(int(task_id))
+        return result
 
     @staticmethod
     def readAll():

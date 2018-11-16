@@ -1,0 +1,14 @@
+item
+    list.html(main_project_row)
+    list.html(adjust_rows)
+    display.html
+    update.html
+    delete.html
+list
+    display.html
+    update.html
+    delete.html
+user
+    display.html(list_of_tasks)
+    update.html
+    delete.html

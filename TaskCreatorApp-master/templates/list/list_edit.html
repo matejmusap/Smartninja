@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+
+{% block title %}Edit project{% endblock title %}
+
+{% block page_content %}
+<h1>Edit Project</h1>
+<form method="post" action="/list/create">
+  <div class="form-group">
+    <label for="project">Project</label>
+    <input type="text" class="form-control" name="project" id="project" placeholder="Enter name of project...">
+  </div>
+  <div class="form-group">
+    <label for="project_goal">Main goal</label>
+    <input type="text" class="form-control" name="project_goal" id="project_goal" placeholder="Main goal...">
+  </div>
+  <div class="form-group">
+    <label for="due_date">Due date</label>
+    <input type="date" class="form-control" name="due_date" id="due_date">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock page_content %}
+{% endblock page_content %}

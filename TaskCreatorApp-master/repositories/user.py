@@ -1,10 +1,13 @@
 from models.user import User
 
 # Handles CRUD methods for User objects
+
+
 class UserRepository():
     @staticmethod
     def create(first_name, email, date_of_birth):
-        new_user = User(first_name = first_name, email = email, date_of_birth = date_of_birth)
+        new_user = User(first_name=first_name, email=email,
+                        date_of_birth=date_of_birth)
         user_key = new_user.put()
         return user_key
 
@@ -16,7 +19,7 @@ class UserRepository():
 
     @staticmethod
     def readAll():
-        return  User.query().order(User.email)
+        return User.query().order(User.email)
 
     @staticmethod
     def update(email, changes):

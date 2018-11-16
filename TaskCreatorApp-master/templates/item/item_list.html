@@ -31,7 +31,7 @@
       <td>{{ item.task_goal }}</td>
       <td>{{ item.task_due_date }}</td>
       <td>
-        <a class="btn btn-primary" href="/item/{{item.task}}" role="button"
+        <a class="btn btn-primary" href="/item/{{item.key.id()}}" role="button"
           >See details</a
         >
         <a class="btn btn-danger" href="/items" role="button">Delete</a>

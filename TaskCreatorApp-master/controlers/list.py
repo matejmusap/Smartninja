@@ -14,8 +14,8 @@ class ListController(BaseHandler):
         return self.render_template("/list/list_list.html", params={"listList": existing_lists})
 
     # custom method - used to handle specific user data
-    def get_list(self, project=None):
-        existing_lists = ListRepository.read(project)
+    def get_list(self, project_id = None):
+        existing_lists = ListRepository.read(project_id)
         return self.render_template("/list/list_display.html", params={"list": existing_lists})
 
     # custom method - handles GET request for user creation
