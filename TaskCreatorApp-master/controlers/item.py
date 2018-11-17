@@ -30,7 +30,7 @@ class ItemController(BaseHandler):
         task_due_date = date(int(form_date[0]), int(
             form_date[1]), int(form_date[2]))
         new_item = ItemRepository.create(
-            completed=completed, user_email=user, task=task, task_goal=task_goal, task_due_date=task_due_date)
+            completed=completed, user_first_name=user, task=task, task_goal=task_goal, task_due_date=task_due_date)
         # adding lag for local development
         time.sleep(1)
         return self.redirect_to('item-list')

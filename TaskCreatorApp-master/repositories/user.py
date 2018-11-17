@@ -12,18 +12,18 @@ class UserRepository():
         return user_key
 
     @staticmethod
-    def read(email):
-        result = User.query(User.email == email).fetch(1)
+    def read(first_name):
+        result = User.query(User.first_name == first_name).fetch(1)
         if result:
             return result[0]
 
     @staticmethod
     def readAll():
-        return User.query().order(User.email)
+        return User.query().order(User.first_name)
 
     @staticmethod
-    def update(email, changes):
-        saved_user = UserRepository.read(email)
+    def update(first_name, changes):
+        saved_user = UserRepository.read(first_name)
         if changes.first_name:
             saved_user.first_name = changes.first_name
         if changes.date_of_birth:
@@ -31,6 +31,6 @@ class UserRepository():
         return saved_user.put()
 
     @staticmethod
-    def delete(email):
-        saved_user = UserRepository.read(email)
+    def delete(first_name):
+        saved_user = UserRepository.read(first_name)
         saved_user.delete()

@@ -7,8 +7,8 @@ from user import UserRepository
 
 class ItemRepository():
     @staticmethod
-    def create(task, completed, task_due_date, task_goal, user_email):
-        user = UserRepository.read(email=user_email)
+    def create(task, completed, task_due_date, task_goal, user_first_name):
+        user = UserRepository.read(first_name=user_first_name)
         task = Item(task=task, completed=completed, task_goal=task_goal,
                     task_due_date=task_due_date, assigne=user)
         return task.put()
@@ -23,8 +23,8 @@ class ItemRepository():
         return Item.query().order(Item.task)
 
     @staticmethod
-    def readAllOfUser(user_email):
-        user = UserRepository.read(email=user_email)
+    def readAllOfUser(user_first_name):
+        user = UserRepository.read(first_name=user_first_name)
         return Item.query(Item.assigne == user)
 
     @staticmethod

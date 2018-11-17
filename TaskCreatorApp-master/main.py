@@ -18,7 +18,7 @@ app = webapp2.WSGIApplication([
 
     # example route with string parameter included in the uri and a custom method
     # specified that handles that request
-    webapp2.Route('/user/<email>', handler=UserController,
+    webapp2.Route('/user/<first_name>', handler=UserController,
                   handler_method="get_user", methods=['GET']),
 
     webapp2.Route('/lists', ListController, name="list-list"),

@@ -12,8 +12,8 @@ class UserController(BaseHandler):
         return self.render_template("/user/user_list.html", params={"userList": existing_users})
 
     # custom method - used to handle specific user data
-    def get_user(self, email):
-        existing_user = UserRepository.read(email)
+    def get_user(self, first_name):
+        existing_user = UserRepository.read(first_name)
         return self.render_template("/user/user_display.html", params={"user": existing_user})
 
     # custom method - handles GET request for user creation

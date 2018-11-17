@@ -10,9 +10,9 @@
     <tr>
       <th scope="col">Id</th>
       <th scope="col">Task</th>
-      <th scope="col">Project</th>
+      <th scope="col">Main project</th>
       <th scope="col">Completed</th>
-      <th scope="col">Task goals</th>
+      <th scope="col">User</th>
       <th scope="col">Due date</th>
       <th scope="col">Actions</th>
     </tr>
@@ -22,13 +22,13 @@
     <tr>
       <td>{{ item.key.id() }}</td>
       <td>{{ item.task }}</td>
-      <td>{{ item.project }}</td>
+      <td>{{ item.main_project }}</td>
       {% if item.completed == False %}
       <td>Not completed</td>
       {% else %}
       <td>Completed</td>
       {% endif %}
-      <td>{{ item.task_goal }}</td>
+      <td>{{ item.assigne.first_name }}</td>
       <td>{{ item.task_due_date }}</td>
       <td>
         <a class="btn btn-primary" href="/item/{{item.key.id()}}" role="button"
