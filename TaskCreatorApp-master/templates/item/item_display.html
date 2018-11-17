@@ -2,7 +2,7 @@
 {% block page_content %}
 <h1>Task {{ item.task }}</h1>
 <a class="btn btn-primary" href="/item" role="button">Go to task</a>
-<a class="btn btn-primary" href="/item/edit/{{item.task}}" role="button"
+<a class="btn btn-primary" href="/item/edit/{{item.key.id()}}" role="button"
   >Edit task</a
 >
 <table class="table table-borderless">

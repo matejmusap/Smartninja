@@ -12,7 +12,7 @@ class ItemController(BaseHandler):
         return self.render_template("/item/item_list.html", params={"itemList": existing_items})
 
     # custom method - used to handle specific user data
-    def get_item(self, task_id=None):
+    def get_task(self, task_id=None):
         existing_items = ItemRepository.read(task_id)
         return self.render_template("/item/item_display.html", params={"item": existing_items})
 
@@ -34,3 +34,14 @@ class ItemController(BaseHandler):
         # adding lag for local development
         time.sleep(1)
         return self.redirect_to('item-list')
+
+    def get_update_task(self, task_id=None):
+        existing_items = ItemRepository.read(task_id)
+        updated_task = update(existing_items, changes)
+        return self.render_template("/item/item_edit.html", params={"item": existing_items})
+
+    def update_task(self, task_id):
+        task = Item.get_by_id(int(task_id))
+        params = {"task" : task}
+        return self.render_template("item_edit.html", params=params)
+        
