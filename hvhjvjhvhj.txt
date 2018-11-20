@@ -1,0 +1,17 @@
+financijski plan
+troškovi
+tjedno mjeseèno
+
+dm ili hrana i slièno
+
+internet bankartvo
+
+na što, gdje, kad tip kupnje(namirnice, ostalo, odjeæa i obuæa), iznos, lista
+
+fiter
+
+unositi kategirije, edit i brisanje
+
+tri defaultne kategorije
+
+nek se lista iznese u excel

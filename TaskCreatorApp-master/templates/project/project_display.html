@@ -1,0 +1,29 @@
+{% extends "template.html" %} {% block title %}Project review{% endblock title
+%} {% block page_content %}
+<h1>Project {{ project.project }}</h1>
+<a class="btn btn-primary" href="/projects" role="button">Go to projects</a>
+<a
+  class="btn btn-primary"
+  href="/project/edit/{{project.project}}"
+  role="button"
+  >Edit project</a
+>
+<table class="table table-borderless">
+  <thead>
+    <tr>
+      <th scope="col">Project</th>
+      <th scope="col">Main goal</th>
+      <th scope="col">Due date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if project %}
+    <tr>
+      <td>{{ project.project }}</td>
+      <td>{{ project.project_goal }}</td>
+      <td>{{ project.due_date }}</td>
+    </tr>
+    {% endif %}
+  </tbody>
+</table>
+{% endblock page_content %}

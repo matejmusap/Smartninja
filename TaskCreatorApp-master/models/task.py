@@ -4,7 +4,7 @@ from user import User
 # Model that represents one task in our application
 
 
-class Item(ndb.Model):
+class Task(ndb.Model):
     task = ndb.StringProperty()
     completed = ndb.BooleanProperty(default=False)
     task_goal = ndb.TextProperty()

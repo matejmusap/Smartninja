@@ -1,8 +1,8 @@
 {% extends "template.html" %} {% block title %}Task review{% endblock title %}
 {% block page_content %}
-<h1>Task {{ item.task }}</h1>
-<a class="btn btn-primary" href="/item" role="button">Go to task</a>
-<a class="btn btn-primary" href="/item/edit/{{item.key.id()}}" role="button"
+<h1>Task {{ task.task }}</h1>
+<a class="btn btn-primary" href="/tasks" role="button">Back to list of tasks</a>
+<a class="btn btn-primary" href="/task/edit/{{task.key.id()}}" role="button"
   >Edit task</a
 >
 <table class="table table-borderless">
@@ -16,13 +16,13 @@
     </tr>
   </thead>
   <tbody>
-    {% if item %}
+    {% if task %}
     <tr>
-      <td>{{ item.task }}</td>
-      <td>{{ item.completed }}</td>
-      <td>{{ item.task_due_date }}</td>
-      <td>{{ item.assigne.first_name }}</td>
-      <td>{{ item.project }}</td>
+      <td>{{ task.task }}</td>
+      <td>{{ task.completed }}</td>
+      <td>{{ task.task_due_date }}</td>
+      <td>{{ task.assigne.first_name }}</td>
+      <td>{{ task.project }}</td>
     </tr>
     {% endif %}
   </tbody>

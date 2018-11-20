@@ -2,7 +2,7 @@
 {% block page_content %}
 <h1>
   Tasks
-  <a class="btn btn-primary" href="/item/create" role="button">Create new</a>
+  <a class="btn btn-primary" href="/task/create" role="button">Create new</a>
 </h1>
 <p>An existing Tasks of the TaskCreator app</p>
 <table class="table table-bordered">
@@ -18,23 +18,23 @@
     </tr>
   </thead>
   <tbody>
-    {% if itemList %} {% for item in itemList %}
+    {% if taskList %} {% for task in taskList %}
     <tr>
-      <td>{{ item.key.id() }}</td>
-      <td>{{ item.task }}</td>
-      <td>{{ item.main_project }}</td>
-      {% if item.completed == False %}
+      <td>{{ task.key.id() }}</td>
+      <td>{{ task.task }}</td>
+      <td>{{ task.main_project }}</td>
+      {% if task.completed == False %}
       <td>Not completed</td>
       {% else %}
       <td>Completed</td>
       {% endif %}
-      <td>{{ item.assigne.first_name }}</td>
-      <td>{{ item.task_due_date }}</td>
+      <td>{{ task.assigne.first_name }}</td>
+      <td>{{ task.task_due_date }}</td>
       <td>
-        <a class="btn btn-primary" href="/item/{{item.key.id()}}" role="button"
+        <a class="btn btn-primary" href="/task/{{task.key.id()}}" role="button"
           >See details</a
         >
-        <a class="btn btn-danger" href="/items" role="button">Delete</a>
+        <a class="btn btn-danger" href="/tasks" role="button">Delete</a>
       </td>
     </tr>
     {% endfor %} {% endif %}

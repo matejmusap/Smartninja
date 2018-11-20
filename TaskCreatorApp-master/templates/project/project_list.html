@@ -1,0 +1,38 @@
+{% extends "template.html" %} {% block title %}Projects{% endblock title %} {%
+block page_content %}
+<h1>
+  Projects
+  <a class="btn btn-primary" href="/project/create" role="button">Create new</a>
+</h1>
+<p>An existing projects of the TaskCreator app</p>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Project</th>
+      <th scope="col">Main goal</th>
+      <th scope="col">Due_date</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if projectList %} {% for project in projectList %}
+    <tr>
+      <td>{{ project.key.id() }}</td>
+      <td>{{ project.project }}</td>
+      <td>{{ project.project_goal }}</td>
+      <td>{{ project.due_date }}</td>
+      <td>
+        <a
+          class="btn btn-primary"
+          href="/project/{{project.key.id()}}"
+          role="button"
+          >See details</a
+        >
+        <a class="btn btn-danger" href="/projects" role="button">Delete</a>
+      </td>
+    </tr>
+    {% endfor %} {% endif %}
+  </tbody>
+</table>
+{% endblock page_content %}
