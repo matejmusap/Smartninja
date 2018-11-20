@@ -1,35 +1,27 @@
 {% extends "template.html" %} {% block title %}Popis troškova{% endblock title
 %} {% block page_content %}
-<h1>Kategorije troškova</h1>
-<p>Vaši troškovi su::</p>
+<h1>Kategorija {{ category.name }}</h1>
+<p>Vaši troškovi u kategoriji {{ category.name }} su:</p>
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th scope="col">Id</th>
       <th scope="col">Kategorija troškova</th>
       <th scope="col">Ukupna potrošnja po kategoriji</th>
       <th scope="col">Opcije</th>
     </tr>
   </thead>
   <tbody>
-    {% if list_of_category %} {% for category in list_of_category %}
+    {% if category %}
     <tr>
-      <td>{{ category.key.id() }}</td>
       <td>{{ category.name }}</td>
       <td>{{ category.total }}</td>
       <td>
-        <a
-          class="btn btn-primary"
-          href="/kategorija/{{category.name}}"
-          role="button"
-          >Detalji</a
-        >
         <a class="btn btn-primary" href="/kategorija/novi_unos" role="button"
           >Unesi novi trošak</a
         >
       </td>
     </tr>
-    {% endfor %} {% endif %}
+    {% endif %}
   </tbody>
 </table>
 {% endblock page_content %}
