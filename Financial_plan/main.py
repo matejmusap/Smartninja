@@ -12,5 +12,5 @@ app = webapp2.WSGIApplication([
     webapp2.Route('/analiza_troskova', AnalyzeHandler),
     webapp2.Route('/kategorija/<name>', ShowCategoryHandler, name="kategorija"),
     webapp2.Route('/kategorija/<name>/novi_unos', NewOutcomeHandler),
-    webapp2.Route('/kategorija/<name>/novi_unos', NewOutcomeHandler, handler_method="post", methods=['POST']),
+    webapp2.Route('/kategorija/<name>/novi_unos', NewOutcomeHandler),
 ], debug=True)

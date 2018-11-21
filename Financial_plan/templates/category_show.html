@@ -21,7 +21,26 @@
         >
       </td>
     </tr>
-    {% endfor %}
+
   </tbody>
+</table >
+<table class="table table-bordered">
+  <thead>
+ <tr>
+    <th scope="col">Artikli ili usluge</th>
+    <th scope="col">Iznos</th>
+    <th scope="col">Datum</th>
+    <th scope="col">Mjesto trošenja</th>
+  </tr>
+  <tbody>
+  <tr>
+    <td>{{ category.outcome.outcome }}</td>
+    <td>{{ category.outcome.amount }}</td>
+    <td>{{ category.outcome.time }}</td>
+    <td>{{ category.outcome.place }}</td>
+  </tr>
+  </tbody>
+  </thead>
 </table>
+{% endfor %}
 {% endblock page_content %}
