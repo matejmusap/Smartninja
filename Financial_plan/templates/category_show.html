@@ -1,5 +1,6 @@
 {% extends "template.html" %} {% block title %}Popis troškova{% endblock title
 %} {% block page_content %}
+{% for category in category %}
 <h1>Kategorija {{ category.name }}</h1>
 <p>Vaši troškovi u kategoriji {{ category.name }} su:</p>
 <table class="table table-bordered">
@@ -11,17 +12,16 @@
     </tr>
   </thead>
   <tbody>
-    {% if category %}
     <tr>
       <td>{{ category.name }}</td>
       <td>{{ category.total }}</td>
       <td>
-        <a class="btn btn-primary" href="/kategorija/novi_unos" role="button"
+        <a class="btn btn-primary" href="/kategorija/{{ category.name }}/novi_unos" role="button"
           >Unesi novi trošak</a
         >
       </td>
     </tr>
-    {% endif %}
+    {% endfor %}
   </tbody>
 </table>
 {% endblock page_content %}

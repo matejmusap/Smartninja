@@ -1,0 +1,22 @@
+{% extends "template.html" %} {% block title %}Unesi novi trošak{% endblock
+title %} {% block page_content %}
+<form action="/kategorija/<name>/novi_unos" methods="POST">
+    <div class="form-group">
+    <label for="outcome">Trošak</label>
+    <input class="form-control" type="text" name="outcome" id="outcome" placeholder="Trošak">
+        </div>
+    <div class="form-group">
+    <label for="amount">Iznos</label>
+    <input class="form-control" type="text" name="amount" id="amount" placeholder="Iznos">
+        <div>
+    <div class="form-group">
+    <label for="time">Datum</label>
+    <input class="form-control" type="date" name="time" id="time">
+    </div>
+    <div class="form-group">
+    <label for="place">Mjesto</label>
+    <input class="form-control" type="text" name="place" id="place" placeholder="Mjesto potrošnje">
+    </div>
+    <button type="submit" class="btn btn-primary">Potvrdi trošak</button>
+</form>
+{% endblock page_content %}
