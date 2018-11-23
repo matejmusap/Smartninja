@@ -1,24 +1,17 @@
 {% extends "template.html" %} {% block title %}Unesi novi trošak{% endblock
 title %} {% block page_content %}
-<form action="/troskovi/novi_unos" method="post">
-    <div class="form-group category">
-        <label for="category">Kategorija</label>
-        <input class="form-control col-3" list="category" name="category" placeholder="Kategorija">
-        <datalist id="category">
-            {% if list_of_category %}
-            {% for category in list_of_category %}
-            <option value="{{category.name}}">
-            {% endfor %}
-            {% endif %}
-        </datalist>
-        <span> or </span>
+{% for category in category %}
+<form action="/kategorija/{{category.name}}/novi_unos" method="post">
+     <div class="form-group">
+    <label for="category">Kategorija</label>
+    <input class="form-control" type="dropdown" name="category" id="category" value="{{category.name}}" disabled>
+        </div>
         <form class="form-group row" action="/kategorije" method="post">
-            <input class="form-control col-3" type="text" name="category" id="category" />
+            <input class="col-3" type="text" name="category" id="category" />
             <button class="btn btn-primary" type="submit">
-                Dodaj novu kategoriju
+              Dodaj novu kategoriju
             </button>
-        </form>
-    </div>
+          </form>
     <div class="form-group">
     <label for="outcome">Trošak</label>
     <input class="form-control" type="text" name="outcome" id="outcome" placeholder="Trošak">
@@ -37,4 +30,5 @@ title %} {% block page_content %}
     </div>
     <button type="submit" class="btn btn-primary">Potvrdi trošak</button>
 </form>
+ {% endfor %}
 {% endblock page_content %}

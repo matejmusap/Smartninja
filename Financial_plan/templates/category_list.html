@@ -1,7 +1,7 @@
 {% extends "template.html" %} {% block title %}Popis troškova{% endblock title
 %} {% block page_content %}
 <h1>Kategorije troškova</h1>
-<p>Vaši troškovi su::</p>
+<p>Vaši troškovi su:</p>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -32,4 +32,8 @@
     {% endfor %} {% endif %}
   </tbody>
 </table>
+<form action="/kategoije" method="post">
+  <input type="text">
+  <button type="submit">sdvsfsf</button>
+</form>
 {% endblock page_content %}

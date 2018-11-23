@@ -1,0 +1,41 @@
+{% extends "template.html" %} {% block title %}Popis troškova{% endblock title
+%} {% block page_content %}
+
+<button class="btn btn-success">
+  <a href="/troskovi/novi_unos" role="button">Dodaj novi trošak</a>
+</button>
+<h1>Vaši troškovi su:</h1>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Trošak</th>
+      <th scope="col">Iznos</th>
+      <th scope="col">Mjesto</th>
+      <th scope="col">Vrijeme</th>
+      <th scope="col">Kategorija</th>
+      <th scope="col">Opcije</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% if list_of_outcomes %} {% for outcome in list_of_outcomes %}
+    <tr>
+      <td>{{ outcome.key.id() }}</td>
+      <td>{{ outcome.name }}</td>
+      <td>{{ outcome.total }}</td>
+      <td>{{ outcome.place }}</td>
+      <td>{{ outcome.time }}</td>
+      <td>{{ outcome.category }}</td>
+      <td>
+        <a
+          class="btn btn-primary"
+          href="/kategorija/{{category.name}}"
+          role="button"
+          >Detalji</a
+        >
+      </td>
+    </tr>
+    {% endfor %} {% endif %}
+  </tbody>
+</table>
+{% endblock page_content %}
