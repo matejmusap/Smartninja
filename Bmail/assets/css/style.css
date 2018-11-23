@@ -1,0 +1,50 @@
+body {
+  background: #2193b0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #6dd5ed,
+    #2193b0
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #6dd5ed,
+    #2193b0
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#landing {
+  font-family: "Black Han Sans", sans-serif;
+  margin: 25vh auto 5vh auto;
+}
+.landing_link {
+  font-family: "Indie Flower", cursive;
+}
+a {
+  color: firebrick;
+}
+ul {
+  list-style-type: none;
+}
+#e-mail_list {
+  height: 80%;
+  height: 75%;
+}
+#e-mail_navbar {
+  height: 45%;
+  margin-top: 10vh;
+}
+.list_of_mails {
+  border: 1px solid red;
+  border-radius: 10%;
+  margin: 2vh;
+}
+#new_message_button {
+  margin-bottom: 10vh;
+}
+#top_username {
+  margin: 5vh;
+}
