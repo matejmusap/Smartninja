@@ -52,3 +52,8 @@ ul {
 #top_username {
   margin: 5vh;
 }
+#user_menu {
+  position: absolute;
+  margin-top: 3vh;
+  right: 5%;
+}
