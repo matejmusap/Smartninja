@@ -57,3 +57,16 @@ ul {
   margin-top: 3vh;
   right: 5%;
 }
+#weather {
+  position: relative;
+  margin-top: 3vh;
+  right: -5%;
+}
+#new_message_title {
+  margin: 4vh 4vh;
+  color: gray;
+  font-family: "Ranga", cursive;
+}
+#weather_display {
+  margin: 5vh 5vh;
+}

@@ -1,0 +1,53 @@
+{% extends "template.html" %} {% block title %}New email{% endblock title%} {%
+block page_content %}
+<div class="dropdown" id="user_menu">
+  <a
+    class="btn btn-secondary dropdown-toggle"
+    href="#"
+    role="button"
+    id="dropdownMenuLink"
+    data-toggle="dropdown"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    {{ user.nickname() }}
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="/{{user.nickname()}}/home">Home</a>
+    <a class="dropdown-item" href="/{{user.nickname()}}/new_message"
+      >New message</a
+    >
+    <a class="dropdown-item" href="{{ logout_url }}">Logout</a>
+  </div>
+</div>
+<h1 id="new_message_title">Write your message:</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <form action="/{{user.nickname()}}/new_message" method="post">
+        <div class="form-group">
+          <label for="reciver">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="receiver"
+            name="receiver"
+            placeholder="name@example.com"
+          />
+        </div>
+        <div class="form-group">
+          <label for="title">Email Subject</label>
+          <input type="text" class="form-control" name="title" id="title" />
+        </div>
+        <div class="form-group">
+          <label for="content">Your message:</label>
+          <textarea class="form-control" id="content" name="content"  rows="6"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock page_content %}

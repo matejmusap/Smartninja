@@ -1,0 +1,9 @@
+{% extends "template.html" %} {% block title %}Weather in Zadar{% endblock
+title%} {% block page_content %}
+<div id="weather_display">
+  <h2>Weather in location {{ weather_info.name }}</h2>
+
+  <p>Description: {{ weather_info.weather[0].description }}</p>
+  <p>Current temperature: {{ weather_info.main.temp }} degrees Celsius</p>
+</div>
+{% endblock page_content %}

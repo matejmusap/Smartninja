@@ -2,6 +2,7 @@
 block page_content %}
 <div class="landing">
   
+  
   {% if user %}
 
   
@@ -12,16 +13,14 @@ block page_content %}
   
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
       <a class="dropdown-item" href="/{{user.nickname()}}/home">Home</a>
-      <a class="dropdown-item" href="/{{user.nickname()}}">About user</a>
+      <a class="dropdown-item" href="/{{user.nickname()}}/new_message">New message</a>
       <a class="dropdown-item" href="{{ logout_url }}">Logout</a>
     </div>
   </div>
-  <div id="login_landing">
   <h1 id="landing">BMAIL</h1>
   <img src="../assets/img/entry.png" alt="entry" />
   <h2>Welcome {{user.nickname()}}!</h2>
   <h3>Click on door or check dropdown menu!</h3>
-</div>
 </div>
   {% else %}
   <h1 id="landing">BMAIL</h1>

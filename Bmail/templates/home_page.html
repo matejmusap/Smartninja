@@ -1,8 +1,36 @@
 {% extends "template.html" %} {% block title %}BMAIL - home{% endblock title%}
 {% block page_content %}
+<div class="dropdown" id="user_menu">
+  <a
+    class="btn btn-secondary dropdown-toggle"
+    href="#"
+    role="button"
+    id="dropdownMenuLink"
+    data-toggle="dropdown"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    {{ user.nickname() }}
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="/{{user.nickname()}}/home">Home</a>
+    <a class="dropdown-item" href="/{{user.nickname()}}/new_message"
+      >New message</a
+    >
+    <a class="dropdown-item" href="{{ logout_url }}">Logout</a>
+  </div>
+</div>
+
+<a href="/weather"
+  ><button type="button" id="weather" class="btn btn-light">
+    Weather in the Zadar
+  </button></a
+>
 <h2 id="top_username">Hello User</h2>
+
 <div class="container">
-  <a id="new_message_button" href=""
+  <a id="new_message_button" href="/{{user.nickname()}}/new_message"
     ><button type="button" class="btn btn-dark">Nova poruka +</button></a
   >
   <div class="row">
