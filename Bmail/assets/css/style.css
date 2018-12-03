@@ -67,6 +67,14 @@ ul {
   color: gray;
   font-family: "Ranga", cursive;
 }
-#weather_display {
+.weather_display {
+  margin: 5vh 5vh;
+}
+
+#weather_form{
+  margin: 5vh 5vh;
+}
+
+#weather_back {
   margin: 5vh 5vh;
 }

@@ -1,9 +1,34 @@
-{% extends "template.html" %} {% block title %}Weather in Zadar{% endblock
+{% extends "template.html" %} {% block title %}Weather{% endblock
 title%} {% block page_content %}
-<div id="weather_display">
-  <h2>Weather in location {{ weather_info.name }}</h2>
 
-  <p>Description: {{ weather_info.weather[0].description }}</p>
-  <p>Current temperature: {{ weather_info.main.temp }} degrees Celsius</p>
-</div>
+<form action="/weather" method="POST">
+  <div id="weather_form">
+  <div class="form-group">
+<label for="city">City:</label>
+<input type="text" id="city" name="city" placeholder="City...">
+    </div>
+  <div class="form-group">
+<label for="country_code">Country code:</label>
+<input type="text" id="country_code" name="country_code" placeholder="Country code...">
+    </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+
+{% if city and country_code %}
+  <div class="weather_display">
+    <h2>Weather in location {{ weather_info.name }}</h2>
+
+    <p>Description: {{ weather_info.weather[0].description }}</p>
+    <p>Current temperature: {{ weather_info.main.temp }} degrees Celsius</p>
+  </div>
+{% endif %}
+{% if message %}
+<div class="weather_display">
+  <h3>{{ message }}</h3>
+  </div>
+{% endif %}
+
+<a href="/{{user.nickname()}}/home" id="weather_back"><button type="button">Back</button></a>
+
 {% endblock page_content %}
