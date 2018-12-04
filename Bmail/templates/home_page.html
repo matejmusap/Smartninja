@@ -44,34 +44,11 @@
     </div>
     <div id="e-mail_list" class="col-sm-9">
       <ul>
-        <li class="list_of_mails">Prva</li>
-        <li class="list_of_mails">Druga</li>
-        <li class="list_of_mails">Treća</li>
-        <li class="list_of_mails">Četvrta</li>
-        <li class="list_of_mails">Prva</li>
-        <li class="list_of_mails">Druga</li>
-        <li class="list_of_mails">Treća</li>
-        <li class="list_of_mails">Četvrta</li>
-        <li class="list_of_mails">Prva</li>
-        <li class="list_of_mails">Druga</li>
-        <li class="list_of_mails">Treća</li>
-        <li class="list_of_mails">Četvrta</li>
-        <li class="list_of_mails">Prva</li>
-        <li class="list_of_mails">Druga</li>
-        <li class="list_of_mails">Treća</li>
-        <li class="list_of_mails">Četvrta</li>
-        <li class="list_of_mails">Prva</li>
-        <li class="list_of_mails">Druga</li>
-        <li class="list_of_mails">Treća</li>
-        <li class="list_of_mails">Četvrta</li>
-        <li class="list_of_mails">Prva</li>
-        <li class="list_of_mails">Druga</li>
-        <li class="list_of_mails">Treća</li>
-        <li class="list_of_mails">Četvrta</li>
-        <li class="list_of_mails">Prva</li>
-        <li class="list_of_mails">Druga</li>
-        <li class="list_of_mails">Treća</li>
-        <li class="list_of_mails">Četvrta</li>
+        {% if message %}
+        {% for message in message %}
+        <li class="list_of_mails">{{ message.receiver }}: {{ message.title }}</li>
+        {% endfor %}
+        {% endif %}
       </ul>
     </div>
   </div>
